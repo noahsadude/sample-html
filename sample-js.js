@@ -10,7 +10,7 @@ document.body.style.backgroundColor = usercolor;
 if (userHour == hourNow) {
     testUserHour =  'Aren\'t you smart! You submitted ' + userHour + ' and the current hour is ' + hourNow;
 } else {
-    testUserHour = 'You can\'t count! Current hour is ' + hourNow; 
+    testUserHour = 'You are learning how to count! You submitted ' + userHour + ' Current hour is ' + hourNow; 
 }
 
 alert(testUserHour);
