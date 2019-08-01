@@ -1,14 +1,16 @@
 var today = new Date();
 var userHour = prompt('What is the current hour?');
+var usercolor = prompt('What should the background color be?');
 var hourNow = today.getHours();
 var greeting;
 var testUserHour;
 
+document.body.style.backgroundColor = usercolor;
 
-if (userHour !== hourNow) {
-    testUserHour = 'You can\'t count! Current hour is ' + hourNow; 
+if (userHour == hourNow) {
+    testUserHour =  'Aren\'t you smart! You submitted ' + userHour + ' and the current hour is ' + hourNow;
 } else {
-    testUserHour = 'Aren\'t you smart! You submitted ' + userHour + ' and the current hour is ' + hourNow;
+    testUserHour = 'You can\'t count! Current hour is ' + hourNow; 
 }
 
 alert(testUserHour);
