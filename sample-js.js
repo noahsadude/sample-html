@@ -15,14 +15,18 @@ if (userHour == hourNow) {
 
 alert(testUserHour);
 
-if (hourNow > 18) {
-    greeting = 'Good evening! ';
-} else if (hourNow > 12){
-    greeting = 'Good afternoon ';
-} else if (hourNow > 12){
-    greeting = 'Good morning ';
-} else {
-    greeting = 'Welcome!';
+function createGreeting(fallback,morning,afternoon,evening) {
+    var currentHour = today.getHours();
+    if (currentHour > 18) {
+        greeting = evening;
+    } else if (currentHour > 12){
+        greeting = afternoon;
+    } else if (currentHour > 12){
+        greeting = morning;
+    } else {
+        greeting = fallback;
+    }
+    return greeting
 }
 
-document.write('<h3>' + greeting +' You submitted ' + userHour + ' and the current hour is ' + hourNow + '</h3>');
+document.write('<h3>' + createGreeting('Hello','Good Morning!','Good Afternoon!','Top of the evening!') +' You submitted ' + userHour + ' and the current hour is ' + hourNow + '</h3>');
